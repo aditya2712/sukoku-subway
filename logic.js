@@ -178,7 +178,7 @@ function validinput()
         {
             if(hash[j]>1)
             {
-                document.getElementById("validatemsg").innerHTML="Error in input";
+                document.getElementById("validatemsg").innerHTML="Error in input!! Same element in same row";
                 return false;
             }
         }
@@ -196,7 +196,7 @@ function validinput()
         {
             if(hash[j]>1)
             {
-                document.getElementById("validatemsg").innerHTML="Error in input";
+                document.getElementById("validatemsg").innerHTML="Error in input!! Same element in same column";
                 return false;
             }
         }
@@ -219,12 +219,23 @@ function validinput()
             {
                 if(hash[p]>1)
                 {
-                    document.getElementById("validatemsg").innerHTML="Error in input";
+                    document.getElementById("validatemsg").innerHTML="Error in input!! Same element is same block";
                     return false;
                 }
             }
         }
     }
 
-    return true;
+    for(i=0;i<9;i++)
+    {
+        for(j=0;j<9;j++)
+        {
+            if(a[i][j]>0)
+            {
+                return true;
+            }
+        }
+    }
+    document.getElementById("validatemsg").innerHTML="The sudoku is empty!!";
+    return false;
 }
