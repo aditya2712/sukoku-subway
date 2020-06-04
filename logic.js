@@ -7,6 +7,9 @@ function maxlength()
     for(k=0;k<81;k++)
     {
         document.getElementsByTagName("input")[k].maxLength="1";
+        document.getElementsByTagName("input")[k].addEventListener("input",function(){
+            this.value=this.value.replace(/[^1-9]/g,'');
+        })
     }
 }
 
@@ -109,8 +112,6 @@ function implement()
             k++;
         }
     }
-    if(valdiatefornumbers()==false)
-    return;
     solve();
     represent();
 }
@@ -127,8 +128,6 @@ function Hint()
             k++;
         }
     }
-    if(valdiatefornumbers()==false)
-        return;
     var r,c;
     do {
         r=Math.floor(((Math.random())*(10)));
@@ -160,21 +159,3 @@ function representSingleCell(r,c)
     k=(9*r)+c;
     document.getElementsByTagName("input")[k].placeholder=a[r][c];
 }
-
-function valdiatefornumbers()
-{
-    for(i=0;i<9;i++)
-    {
-        for(j=0;j<9;j++)
-        {
-            if( a[i][j]>=0 && a[i][j]<=9 );
-            else
-            {
-                document.getElementById("validatemsg").innerHTML="Error detected!!";
-                return false;
-            }
-        }
-    }
-    return true;
-}   
-
