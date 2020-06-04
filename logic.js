@@ -1,6 +1,5 @@
 var a=new Array(9);
 var i,j,k=0;
-var final="";
 
 function maxlength()
 {
@@ -112,6 +111,8 @@ function implement()
             k++;
         }
     }
+    if(validinput()==false)
+    return;
     solve();
     represent();
 }
@@ -128,6 +129,8 @@ function Hint()
             k++;
         }
     }
+    if(validinput()==false)
+    return;
     var r,c;
     do {
         r=Math.floor(((Math.random())*(10)));
@@ -158,4 +161,70 @@ function representSingleCell(r,c)
 {
     k=(9*r)+c;
     document.getElementsByTagName("input")[k].placeholder=a[r][c];
+}
+
+function validinput()
+{
+    var hash = new Array(9);
+    for(i=0;i<9;i++)
+    {
+        for(j=0;j<10;j++)
+        hash[j]=0;
+        for(j=0;j<9;j++)
+        {
+            hash[a[i][j]]++;
+        }
+        for(j=1;j<10;j++)
+        {
+            if(hash[j]>1)
+            {
+                document.getElementById("validatemsg").innerHTML="Error in input";
+                return false;
+            }
+        }
+    }
+
+    for(i=0;i<9;i++)
+    {
+        for(j=0;j<10;j++)
+        hash[j]=0;
+        for(j=0;j<9;j++)
+        {
+            hash[a[j][i]]++;
+        }
+        for(j=1;j<10;j++)
+        {
+            if(hash[j]>1)
+            {
+                document.getElementById("validatemsg").innerHTML="Error in input";
+                return false;
+            }
+        }
+    }
+    var p,q;
+    for(i=0;i<9;i+=3)
+    {
+        for(j=0;j<9;j+=3)
+        {
+            for(p=0;p<10;p++)
+            hash[p]=0;
+            for(p=i;p<i+3;p++)
+            {
+                for(q=j;q<j+3;q++)
+                {
+                    hash[a[p][q]]++;
+                }
+            }
+            for(p=1;p<10;p++)
+            {
+                if(hash[p]>1)
+                {
+                    document.getElementById("validatemsg").innerHTML="Error in input";
+                    return false;
+                }
+            }
+        }
+    }
+
+    return true;
 }
