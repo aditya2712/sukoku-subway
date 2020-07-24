@@ -2,12 +2,27 @@
 <html> 
 <head>
 	<title>The Sudoku Subway</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styling.css">
 </head>
 
 <body onload="maxlength()" class="list-unstyled">
+	
+	<div class="header">
+		<h1>
+			The Sudoku Subway
+		</h1>
+		<h2>
+			A classic sudoku solver
+		</h2>
+	</div>
+	<div class="navbar">
+		<a href="#">Link</a>
+		<a href="#">Link</a>
+		<a href="#">Link</a>
+	</div>
 	<center>
-		<div >
+		<div class="grid">
 			<table>
 				<tr >
 					<td><input class="top-left" id="a[0][0]"  type="text" name=""></td>
@@ -120,7 +135,7 @@
 	<br>
 
 	<center> 
-		<button class=" " onclick="implement()">
+		<button class="btn" onclick="implement()">
 			Submit
 		</button> 
 	</center>
@@ -128,7 +143,7 @@
 	<br>
 
 	<center>
-		<button class=" " onclick="Hint()">
+		<button class="btn" onclick="Hint()">
 			Get Random Hint
 		</button> 
 	</center>

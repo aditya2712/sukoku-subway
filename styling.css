@@ -1,7 +1,61 @@
 body{
-	background: #8360c3; 
-	background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);  
-	background: linear-gradient(to right, #2ebf91, #8360c3);
+
+	background: #44A08D;  
+	background: -webkit-linear-gradient(to right, #093637, #44A08D);  
+	background: linear-gradient(to right, #093637, #44A08D); 
+
+
+	/* background-color: rgb(222, 247, 194); */
+}
+.header
+{
+	background: url(headerImg.jpg) no-repeat center;
+	opacity: 1;
+	text-align: center;
+	padding: 3%;
+	color: black;
+	background-size: 100%;
+}
+.header h1{
+	background-color: white;
+	opacity: 0.85;
+	font-size: 70px;
+
+}
+.header h2{
+	background-color: white;
+	opacity: 0.85;
+	font-size: 40px;
+}
+.navbar
+{
+	overflow: hidden;
+	background-color: black;
+	margin: 2px ;
+	padding: 1%;
+}
+.navbar a 
+{
+	display: block;
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px ;
+	text-decoration: none;
+	font-size: larger;
+	font-style: normal ;
+}
+
+.navbar a:hover{
+	background-color: rgb(201, 192, 192);
+	color: black;
+}
+
+.grid
+{
+	margin-top: 2% ;
+	height: auto;
+	width: auto;
 }
 
 #validatemsg{
@@ -89,3 +143,41 @@ input::placeholder
 	height: 25px;
 	border-right: 3px black solid;
 }
+
+.btn{
+	border:2px rgb(25, 25, 70) solid;
+	padding: 4px;
+	border-radius: 8px;
+	background-color: rgb(209, 209, 223);
+	font-size: large;
+}
+
+@media only screen and (max-width: 600px) {
+	.header h1{
+		font-size: xx-large;
+	}
+	.header h2{
+		font-size: medium;
+	}
+	.navbar a{
+		float: none;
+		width: 100%;
+	}
+	.grid
+	{
+		margin-top:  ;
+		height: 100%;
+		width: 100%;
+	}
+	input{
+		padding: 0px;
+	}
+	input::placeholder
+	{
+		font-size: medium;
+	}
+	input, select, textarea
+	{
+		font-size: medium;
+	}
+  }
