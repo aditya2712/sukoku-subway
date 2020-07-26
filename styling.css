@@ -15,17 +15,24 @@ body{
 	padding: 3%;
 	color: black;
 	background-size: 100%;
+	
 }
 .header h1{
 	background-color: white;
 	opacity: 0.85;
 	font-size: 70px;
-
+	width: fit-content;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 .header h2{
 	background-color: white;
 	opacity: 0.85;
 	font-size: 40px;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
 }
 .navbar
 {
@@ -56,15 +63,15 @@ body{
 	margin-top: 2% ;
 	height: auto;
 	float: left;
-	width: 75%;
+	width: 30%;
 
 }
 
 .rightcolumn
 {
-	margin-top: 2% ;
+	margin-top: 10% ;
 	float: left;
-	width: 25%;
+	width: 70%;
 
 }
 
@@ -75,12 +82,28 @@ body{
 }
 .image
 {
-	padding: 20px;
+	margin: auto;
 }
 .card {
-	background-color: white;
+	background-color: whitesmoke;
 	padding: 20px;
 	margin-top: 20px;
+	margin-left: 10px;
+	width: fit-content;
+}
+.card h1{
+	font-family: 'Rowdies', cursive;
+}
+.card h3
+{
+	font-family: 'Rowdies', cursive;
+}
+
+.row::after
+{
+	content: "";
+	display: table;
+	clear: both;
 }
 
 #validatemsg{
