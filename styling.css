@@ -160,6 +160,37 @@ body{
 {
 	opacity: 0.8;
 }
+
+.collapsible
+{
+	margin-left: 40px;
+	background-color:  rgb(46, 45, 45);
+	color: white;
+	font-size: larger;
+	cursor: pointer;
+	border: none;
+	border-radius: 4px;
+	outline: none;
+	text-align: left;
+}
+.collapsible::after
+{
+	content: "\002B";
+}
+.active::after
+{
+	content: "\2212";
+}
+.content
+{
+	margin-left: 141px;
+	max-height: 0;
+	transition: max-height 0.2s ease-out;
+	overflow: hidden;
+}
+.footer p{
+	margin-left: 45px;
+}
 #validatemsg{
 	font-size: larger;
 	color: black;
