@@ -4,7 +4,6 @@ body{
 	background: -webkit-linear-gradient(to right, #093637, #44A08D);  
 	background: linear-gradient(to right, #093637, #44A08D); 
 
-
 	/* background-color: rgb(222, 247, 194); */
 }
 .header
@@ -110,9 +109,7 @@ body{
 {
 	margin-top: 50px;
 	background-color: rgb(46, 45, 45);
-	/* height: 50px; */
 	padding: 10px;
-	/* text-align: center; */
 	color: blanchedalmond;
 }
 
@@ -303,7 +300,6 @@ input::placeholder
 	}
 	.leftcolumn
 	{
-		/* height: 100%; */
 		width: 100%;
 	}
 	.rightcolumn
