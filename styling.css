@@ -155,7 +155,11 @@ body{
 .fa-instagram {
 	background: #125688;
 	color: white;
- }
+}
+.fa-github{
+	background: wheat ;
+	color: black;
+}
 .fa:hover
 {
 	opacity: 0.8;
