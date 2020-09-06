@@ -27,16 +27,16 @@ for(i=0;i<9;i++)
 
 function valid(r,c,val)
 {
-for(i=0;i<9;i++)
-{
-    if(a[i][c]==val)
-    return false;
-}
-for(j=0;j<9;j++)
-{
-    if(a[r][j]==val)
-    return false;
-}
+    for(i=0;i<9;i++)
+    {
+        if(a[i][c]==val)
+        return false;
+    }
+    for(j=0;j<9;j++)
+    {
+        if(a[r][j]==val)
+        return false;
+    }
 var baserow= Math.floor(r/3);
 var basecol= Math.floor(c/3);
 for(i=baserow*3;i<baserow*3+3;i++)
@@ -252,3 +252,7 @@ coll[0].addEventListener("click",function(){
     content.style.maxHeight= content.scrollHeight+"px";
     }
 });
+
+// module.exports={
+//     validinput,representSingleCell,represent,Hint,implement,unassignedcell,solve,valid,maxlength
+// };
