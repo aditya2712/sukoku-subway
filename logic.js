@@ -252,7 +252,3 @@ coll[0].addEventListener("click",function(){
     content.style.maxHeight= content.scrollHeight+"px";
     }
 });
-
-// module.exports={
-//     validinput,representSingleCell,represent,Hint,implement,unassignedcell,solve,valid,maxlength
-// };

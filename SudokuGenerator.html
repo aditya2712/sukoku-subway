@@ -1,12 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html> 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudoku Generator</title>
+	<link rel="icon" href="sudoku subwy logo.png">
+	<title>The Sudoku Subway</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styling.css">
+	<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Arimo&family=Dancing+Script&family=Yanone+Kaffeesatz:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script data-ad-client="ca-pub-2817046726639050" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
-<body>
-    <div id="show"></div>
-    <script src="GeneratorScript.js"></script>
+
+<body onload="maxlength()" class="list-unstyled">
+	
+	<div class="header">
+		<h1>
+			The Sudoku Subway
+		</h1>
+		<h2>
+			A classic sudoku solver
+		</h2>
+	</div>
+	<div class="navbar">
+		<a href="https://en.wikipedia.org/wiki/Sudoku" target="_blank">Rules of Sudoku</a>
+		<a href='./SudokuGenerator.html' target="_blank">Sudoku Solver</a>
+		<a href="#about" style="float: right;">About The Developer</a>
+	</div>
+	<div class="row">
+		<div class="leftcolumn">
+			<div class="card">
+				<h1>Sudoku:</h1>
+				<div class="image" style="height: 200px; width: 200px;">
+					<img class="profilepic" src="description.jpg" alt="Profile Picture">
+				</div>
+				<p>Sudoku is a logic-based, combinatorial number-placement puzzle. In classic sudoku, the objective is to fill a 9×9 grid with digits so that each column, each row, and each of the nine 3×3 subgrids that compose the grid contain all of the digits from 1 to 9.</p>
+				<h1>Sudoku Generator:</h1>
+				<p>
+				Just plug-In the values that are given in your grid, in the grid shown, and don't worry about the rest cells (Leave them empty).
+				Now if you wish to get a hint at any random position then hit the <b>Get Random Hint</b> button or if you want the sudoku to be solved then hit the <b>Solve</b> button.<br>
+				<h3>HAVE FUN !</h3>
+				</p>
+			</div>
+		</div>
+
+		<div class="rightcolumn">
+			<center>
+				<div class="grid">
+					<table>
+						<tr >
+							<td><input class="top-left" id="a[0][0]"  type="text" name=""></td>
+							<td><input class="top" id="a[0][1]" type="text" name=""></td>
+							<td><input class="top-right" id="a[0][2]" type="text" name=""></td>
+							<td><input class="top-left" id="a[0][3]" type="text" name=""></td>
+							<td><input class="top" id="a[0][4]" type="text" name=""></td>
+							<td><input class="top-right" id="a[0][5]"  type="text" name=""></td>
+							<td><input class="top-left" id="a[0][6]"  type="text" name=""></td>
+							<td><input class="top" id="a[0][7]"  type="text" name=""></td>
+							<td><input class="top-right" id="a[0][8]"  type="text" name=""></td>
+						</tr>
+						<tr >
+							<td><input class="left"  id="a[1][0]" type="text" name=""></td>
+							<td><input class="tag"  id="a[1][1]"  type="text" name=""></td>
+							<td><input class="right"   id="a[1][2]"  type="text" name=""></td>
+							<td><input class="left"  id="a[1][3]"  type="text" name=""></td>
+							<td><input class="tag"   id="a[1][4]" type="text" name=""></td>
+							<td><input class="right"  id="a[1][5]"  type="text" name=""></td>
+							<td><input class="left"  id="a[1][6]"  type="text" name=""></td>
+							<td><input class="tag"  id="a[1][7]"  type="text" name=""></td>
+							<td><input class="right"   id="a[1][8]" type="text" name=""></td>
+						</tr>
+						<tr >
+							<td><input class="bottom-left" type="text" name=""></td>
+							<td><input class="bottom" type="text" name=""></td>
+							<td><input class="bottom-right" type="text" name=""></td>
+							<td><input class="bottom-left" type="text" name=""></td>
+							<td><input class="bottom" type="text" name=""></td>
+							<td><input class="bottom-right" type="text" name=""></td>
+							<td><input class="bottom-left" type="text" name=""></td>
+							<td><input class="bottom" type="text" name=""></td>
+							<td><input class="bottom-right" type="text" name=""></td>
+						</tr>
+						<tr >
+							<td><input class="top-left"  type="text" name=""></td>
+							<td><input class="top" type="text" name=""></td>
+							<td><input class="top-right" type="text" name=""></td>
+							<td><input class="top-left" type="text" name=""></td>
+							<td><input class="top" type="text" name=""></td>
+							<td><input class="top-right" type="text" name=""></td>
+							<td><input class="top-left" type="text" name=""></td>
+							<td><input class="top" type="text" name=""></td>
+							<td><input class="top-right" type="text" name=""></td>
+						</tr>
+						<tr >
+							<td><input class="left" type="text" name=""></td>
+							<td><input class="tag" type="text" name=""></td>
+							<td><input class="right" type="text" name=""></td>
+							<td><input class="left" type="text" name=""></td>
+							<td><input class="tag" type="text" name=""></td>
+							<td><input class="right" type="text" name=""></td>
+							<td><input class="left" type="text" name=""></td>
+							<td><input class="tag" type="text" name=""></td>
+							<td><input class="right" type="text" name=""></td>
+						</tr>
+						<tr >
+							<td><input class="bottom-left" type="text" name=""></td>
+							<td><input class="bottom" type="text" name=""></td>
+							<td><input class="bottom-right" type="text" name=""></td>
+							<td><input class="bottom-left" type="text" name=""></td>
+							<td><input class="bottom" type="text" name=""></td>
+							<td><input class="bottom-right" type="text" name=""></td>
+							<td><input class="bottom-left" type="text" name=""></td>
+							<td><input class="bottom" type="text" name=""></td>
+							<td><input class="bottom-right" type="text" name=""></td>
+						</tr>
+						<tr >
+							<td><input class="top-left"  type="text" name=""></td>
+							<td><input class="top" type="text" name=""></td>
+							<td><input class="top-right" type="text" name=""></td>
+							<td><input class="top-left" type="text" name=""></td>
+							<td><input class="top" type="text" name=""></td>
+							<td><input class="top-right" type="text" name=""></td>
+							<td><input class="top-left" type="text" name=""></td>
+							<td><input class="top" type="text" name=""></td>
+							<td><input class="top-right" type="text" name=""></td>
+						</tr>
+						<tr >
+							<td><input class="left" type="text" name=""></td>
+							<td><input class="tag" type="text" name=""></td>
+							<td><input class="right" type="text" name=""></td>
+							<td><input class="left" type="text" name=""></td>
+							<td><input class="tag" type="text" name=""></td>
+							<td><input class="right" type="text" name=""></td>
+							<td><input class="left" type="text" name=""></td>
+							<td><input class="tag" type="text" name=""></td>
+							<td><input class="right" type="text" name=""></td>
+						</tr>
+						<tr >
+							<td><input class="bottom-left" type="text" name=""></td>
+							<td><input class="bottom" type="text" name=""></td>
+							<td><input class="bottom-right" type="text" name=""></td>
+							<td><input class="bottom-left" type="text" name=""></td>
+							<td><input class="bottom" type="text" name=""></td>
+							<td><input class="bottom-right" type="text" name=""></td>
+							<td><input class="bottom-left" type="text" name=""></td>
+							<td><input class="bottom" type="text" name=""></td>
+							<td><input class="bottom-right" type="text"  name=""></td>
+						</tr>
+					</table>
+				</div>
+				<br>
+				<div id="validatemsg"></div>
+				
+				<button class="btn" onclick="implement()">
+					Submit
+				</button>
+				
+				<button class="btn" onclick="Hint()">
+					Get Random Hint
+				</button> 
+			</center>
+		</div>	
+	</div>
+	<div class="footer" id="about">
+		<h2 style="text-align: left; padding-left: 30px;">Meet the developer:</h2>
+
+		<button class="collapsible">
+			Aditya Agarwal
+		</button>
+
+		<div class="content">
+			<img src="aditya pic.jpg" alt="developer profile picture" style="height: 150px; width: 150px;">
+		</div>
+		<p>
+			<strong>NIT Silchar<br>
+				CSE</strong> 
+		</p>
+		<div class="icons">
+			<a href="https://www.facebook.com/profile.php?id=100009177385701" target="_blank" class="fa fa-facebook"></a>
+			<a href="https://www.instagram.com/_aditya_2712/" target="_blank" class="fa fa-instagram"></a>
+			<a href="https://www.youtube.com/channel/UCnm4Ub9cWVbzRv277EsS4mA" target="_blank" class="fa fa-youtube"></a>
+			<a href="https://github.com/aditya2712" target="_blank" class="fa fa-github" style="font-size: 18px;"></a>
+			<a href="https://www.linkedin.com/in/aditya-agarwal-1b26301a0" target="_blank" class="fa fa-linkedin"></a>
+			<a href="mailto:aditya.agarwal.20012712@gmail.com" target="_blank" class="fa fa-google"></a>
+			<a href="mailto:adi27122001@yahoo.com" target="_blank" class="fa fa-yahoo"></a>
+		</div>
+	</div>
+
+<script src="GeneratorScript.js"></script>
 </body>
 </html>
